@@ -68,6 +68,19 @@ export default function Portfolio() {
       gradient: "from-emerald-400 to-teal-600",
       year: "2025",
       company: "Personal Project"
+    },
+    {
+      title: "Closed-Loop Auto-Driller Simulation",
+      description: "Controller design and validation study for torsional stick-slip detection and mitigation using real WITSML data from the Equinor Volve field (North Sea). Built a Composite Severity Score (CSS) algorithm fusing downhole MWD and surface signals, a 4-state machine that autonomously reduces WOB/adjusts RPM, and a Next.js dashboard with live 14-day playback at up to 100× speed.",
+      tech: ["Python", "Next.js 15", "Recharts", "Tailwind CSS", "WITSML"],
+      link: "https://autodriller.xyz",
+      links: [
+        { label: "autodriller.xyz", href: "https://autodriller.xyz" },
+        { label: "drillmanage.com", href: "https://drillmanage.com" }
+      ],
+      gradient: "from-amber-400 to-orange-600",
+      year: "2025",
+      company: "Personal Project"
     }
   ];
 
@@ -211,7 +224,7 @@ export default function Portfolio() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </a>
                 <a 
-                  href="/Farhan_KhanRes2.pdf" 
+                  href="/Farhan_Khan_Resume_ENGINEER.pdf" 
                   download
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 font-bold hover:bg-cyan-400 hover:text-black transition-all tracking-wide text-center"
                 >
@@ -449,13 +462,30 @@ export default function Portfolio() {
 
                   {/* Link */}
                   <div className="lg:col-span-3 flex items-end lg:items-center lg:justify-end">
-                    <a 
-                      href={project.link}
-                      className="inline-flex items-center gap-3 text-cyan-400 font-semibold hover:gap-4 transition-all group/link"
-                    >
-                      <span className="tracking-wide">VIEW DETAILS</span>
-                      <ExternalLink className="w-5 h-5 group-hover/link:rotate-45 transition-transform" />
-                    </a>
+                    {project.links ? (
+                      <div className="flex flex-col gap-3 items-end">
+                        {project.links.map((l, i) => (
+                          <a
+                            key={i}
+                            href={l.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-cyan-400 font-semibold hover:gap-3 transition-all group/link text-sm"
+                          >
+                            <span className="tracking-wide font-mono">{l.label}</span>
+                            <ExternalLink className="w-4 h-4 group-hover/link:rotate-45 transition-transform" />
+                          </a>
+                        ))}
+                      </div>
+                    ) : (
+                      <a
+                        href={project.link}
+                        className="inline-flex items-center gap-3 text-cyan-400 font-semibold hover:gap-4 transition-all group/link"
+                      >
+                        <span className="tracking-wide">VIEW DETAILS</span>
+                        <ExternalLink className="w-5 h-5 group-hover/link:rotate-45 transition-transform" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -473,7 +503,7 @@ export default function Portfolio() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {Object.entries(skills).map(([category, items], idx) => (
+            {Object.entries(skills).map(([category, items]) => (
               <div
                 key={category}
                 className="relative group"
@@ -542,7 +572,7 @@ export default function Portfolio() {
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
             </a>
             <a 
-              href="/Farhan_KhanRes2.pdf"
+              href="/Farhan_Khan_Resume_ENGINEER.pdf"
               download
               className="border-2 border-cyan-400 text-cyan-400 px-12 py-6 font-bold hover:bg-cyan-400 hover:text-black transition-all text-lg tracking-wide"
             >
