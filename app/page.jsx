@@ -34,40 +34,13 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Serial Allocation System",
-      description: "Designed and deployed a global Serial Allocation System with Azure (SQL, App Services, Key Vault), enabling conflict-free assignment of 10,000+ serials per batch. Built with React (TypeScript) and C#/.NET, used by 50+ global users.",
-      tech: ["React", "TypeScript", "C#", ".NET 8", "Azure SQL", "Azure App Services"],
-      link: "#",
-      gradient: "from-blue-400 to-cyan-600",
+      title: "RAG-Tag: Construction AI Query System",
+      description: "AI capstone for PCL Construction that transforms IFC/BIM digital twin models into queryable representations. Parses IFC files into a SQLite database and NetworkX graph, then uses PydanticAI to route natural language questions to the right backend — SQL for counts and aggregations, graph traversal for spatial and topological queries. Supports IFC 4.3 RDF ontology with CLI and TUI interfaces.",
+      tech: ["Python", "PydanticAI", "SQLite", "NetworkX", "IFC/BIM", "RAG"],
+      link: "https://github.com/469-ragtag/rag-tag",
+      gradient: "from-violet-400 to-purple-600",
       year: "2025",
-      company: "INOVA Geophysical"
-    },
-    {
-      title: "Multimodal Mental Health Assistant",
-      description: "Built a multimodal mental health assistant (text, audio, video) using OpenAI APIs that improved emotion detection by 20%. Applied transfer learning across modalities and deployed real-time support chatbot with inference-time safeguards.",
-      tech: ["Python", "OpenAI API", "TensorFlow", "PyTorch", "Flask"],
-      link: "#",
-      gradient: "from-purple-400 to-pink-600",
-      year: "2024-2025",
-      company: "NUS Research"
-    },
-    {
-      title: "Driver Behavior Classification System",
-      description: "Led a team building a MobileNetV2 model reaching 95% accuracy for driver-behavior classification. Deployed via AWS (S3, EMR, Lambda, SageMaker) and reduced fleet alert response times by 30% with Streamlit monitoring interface.",
-      tech: ["Python", "TensorFlow", "AWS S3", "SageMaker", "Lambda", "Streamlit"],
-      link: "#",
-      gradient: "from-orange-400 to-red-600",
-      year: "2024",
-      company: "NUS & AWS"
-    },
-    {
-      title: "Sentio Mood Tracking App",
-      description: "Led a team of 6 using Agile methodology to deliver a comprehensive mood tracking app with 1,000+ events recorded. Implemented real-time username validation reducing sign-up errors by 40%, with Firebase Auth/Firestore supporting 100+ profiles.",
-      tech: ["Java", "Android", "Firebase", "Firestore", "Firebase Auth"],
-      link: "#",
-      gradient: "from-emerald-400 to-teal-600",
-      year: "2025",
-      company: "Personal Project"
+      company: "PCL Construction Capstone"
     },
     {
       title: "Closed-Loop Auto-Driller Simulation",
@@ -79,6 +52,15 @@ export default function Portfolio() {
         { label: "drillmanage.com", href: "https://drillmanage.com" }
       ],
       gradient: "from-amber-400 to-orange-600",
+      year: "2025",
+      company: "Personal Project"
+    },
+    {
+      title: "Sentio Mood Tracking App",
+      description: "Led a team of 6 using Agile methodology to deliver a comprehensive mood tracking app with 1,000+ events recorded. Implemented real-time username validation reducing sign-up errors by 40%, with Firebase Auth/Firestore supporting 100+ profiles.",
+      tech: ["Java", "Android", "Firebase", "Firestore", "Firebase Auth"],
+      link: "https://github.com/cmput301-w25/project-bread",
+      gradient: "from-emerald-400 to-teal-600",
       year: "2025",
       company: "Personal Project"
     }
